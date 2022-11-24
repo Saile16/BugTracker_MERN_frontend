@@ -33,8 +33,8 @@ const ConfirmarCuenta = () => {
   return (
     <>
       <h1 className="text-sky-600 font-black text-6xl capitalize">
-        Confirma tu cuenta y comienza a crear tus{" "}
-        <span className="text-slate-700">bugs lol</span>
+        Confirm your account and start creating your{" "}
+        <span className="text-slate-700">projects</span>
       </h1>
       <div>
         {msg && <Alerta alerta={alerta} />}
@@ -43,7 +43,7 @@ const ConfirmarCuenta = () => {
             className="block text-center my-5 text-slate-500 uppercase text-sm"
             to="/"
           >
-            ¿Ya tienes una cuenta? Inicia Sesión
+            Do you already have an account? Log in
           </Link>
         )}
       </div>

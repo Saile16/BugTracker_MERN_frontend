@@ -23,7 +23,6 @@ const FormularioProyecto = () => {
       setFechaEntrega(proyecto.fechaEntrega?.split("T")[0]);
       setCliente(proyecto.cliente);
     } else {
-      console.log("creando");
     }
   }, [params]);
   const handleSubmit = async (e) => {
@@ -31,7 +30,7 @@ const FormularioProyecto = () => {
 
     if ([nombre, descripcion, fechaEntrega, cliente].includes("")) {
       mostrarAlerta({
-        msg: "Todos los campos son obligatorios",
+        msg: "All fields are required",
         error: true,
       });
       return;
@@ -66,7 +65,7 @@ const FormularioProyecto = () => {
           htmlFor="nombre"
           className="text-gray-700 uppercase font-bold text-sm"
         >
-          Nombre Proyecto
+          Project Name
         </label>
         <input
           id="nombre"
@@ -83,7 +82,7 @@ const FormularioProyecto = () => {
           htmlFor="descripcion"
           className="text-gray-700 uppercase font-bold text-sm"
         >
-          Descipción
+          Description
         </label>
         <textarea
           id="descripcion"
@@ -100,7 +99,7 @@ const FormularioProyecto = () => {
           htmlFor="fecha-entrega"
           className="text-gray-700 uppercase font-bold text-sm"
         >
-          Fecha Entrega
+          Deliver date
         </label>
         <input
           id="entrega"
@@ -115,7 +114,7 @@ const FormularioProyecto = () => {
           htmlFor="cliente"
           className="text-gray-700 uppercase font-bold text-sm"
         >
-          Nombre Cliente
+          Client name
         </label>
         <input
           id="cliente"
@@ -128,7 +127,7 @@ const FormularioProyecto = () => {
       </div>
       <input
         type="submit"
-        value={id ? "Actualizar Proyecto" : "Crear Proyecto"}
+        value={id ? "Update Project" : "Create Project"}
         className="bg-sky-600 w-full p-3 uppercase font-bold text-white rounded cursor-pointer hover:bg-sky-700 transition-colors"
       />
     </form>

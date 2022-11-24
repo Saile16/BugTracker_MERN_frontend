@@ -17,7 +17,7 @@ const Tarea = ({ tarea }) => {
 
         {estado && (
           <p className="text-xs bg-green-600 uppercase rounded-lg p-1 text-white">
-            Completado por : {tarea.completado.nombre}
+            Completed by : {tarea.completado.nombre}
           </p>
         )}
       </div>
@@ -27,7 +27,7 @@ const Tarea = ({ tarea }) => {
             onClick={() => handleModalEditarTarea(tarea)}
             className="bg-indigo-600 px-4 py-3 text-white uppercase font-bold text-sm rounded-lg"
           >
-            Editar
+            Edit
           </button>
         )}
 
@@ -37,7 +37,7 @@ const Tarea = ({ tarea }) => {
             estado ? "bg-sky-600" : "bg-gray-600"
           } px-4 py-3 text-white uppercase font-bold text-sm rounded-lg`}
         >
-          {estado ? "Completa" : "Incompleta"}
+          {estado ? "Complete" : "Incomplete"}
         </button>
 
         {admin && (
@@ -45,7 +45,7 @@ const Tarea = ({ tarea }) => {
             onClick={() => handleModalEliminarTarea(tarea)}
             className="bg-red-600 px-4 py-3 text-white uppercase font-bold text-sm rounded-lg"
           >
-            Eliminar
+            Delete
           </button>
         )}
       </div>

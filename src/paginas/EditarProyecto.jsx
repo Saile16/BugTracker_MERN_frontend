@@ -24,7 +24,7 @@ const EditarProyecto = () => {
   return (
     <>
       <div className="flex justify-between">
-        <h1 className="font-black text-4xl">EditarProyecto: {nombre}</h1>
+        <h1 className="font-black text-4xl">Edit Project: {nombre}</h1>
         <div className="flex items-center gap-2 text-gray-400 hover:text-black">
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -42,7 +42,7 @@ const EditarProyecto = () => {
           </svg>
 
           <button className="uppercase font-bold" onClick={handleClick}>
-            Eliminar
+            Delete
           </button>
         </div>
       </div>

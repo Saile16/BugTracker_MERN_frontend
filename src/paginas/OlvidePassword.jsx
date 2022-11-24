@@ -11,7 +11,7 @@ const OlvidePassword = () => {
     if (email === "" || email.length < 6) {
       setAlerta({
         error: true,
-        msg: "El email es obligatorio",
+        msg: "Email is required",
       });
       return;
     }
@@ -35,8 +35,8 @@ const OlvidePassword = () => {
   return (
     <>
       <h1 className="text-sky-600 font-black text-6xl capitalize">
-        Recupera tu acceso y no pierdas tus{" "}
-        <span className="text-slate-700">bugs lol</span>
+        Recover your access and do not lose your{" "}
+        <span className="text-slate-700">projects</span>
       </h1>
       {msg && <Alerta alerta={alerta} />}
       <form
@@ -72,13 +72,13 @@ const OlvidePassword = () => {
           className="block text-center my-5 text-slate-500 uppercase text-sm"
           to="/registrar"
         >
-          ¿Ya tienes una cuenta? Inicia Sesión
+          Do you already have an account? Log in
         </Link>
         <Link
           className="block text-center my-5 text-slate-500 uppercase text-sm"
           to="/registrar"
         >
-          ¿No tienes una cuenta? Regístrate
+          You do not have an account? Sign up
         </Link>
       </nav>
     </>

@@ -25,7 +25,7 @@ const Login = () => {
     if ([email, password].includes("")) {
       setAlerta({
         error: true,
-        msg: "Todos los campos son obligatorios",
+        msg: "All fields are required",
       });
       return;
     }
@@ -51,8 +51,7 @@ const Login = () => {
   return (
     <>
       <h1 className="text-sky-600 font-black text-6xl capitalize">
-        Inicia sesión y administra tus{" "}
-        <span className="text-slate-700">bugs lol</span>
+        Sign in and manage your <span className="text-slate-700">projects</span>
       </h1>
       {msg && <Alerta alerta={alerta} />}
       <form
@@ -104,13 +103,13 @@ const Login = () => {
           className="block text-center my-5 text-slate-500 uppercase text-sm"
           to="/registrar"
         >
-          ¿No tienes una cuenta? Regístrate
+          You do not have an account? Sign up
         </Link>
         <Link
           className="block text-center my-5 text-slate-500 uppercase text-sm"
           to="/olvide-password"
         >
-          Olvidé mi password
+          I forgot my password
         </Link>
       </nav>
     </>

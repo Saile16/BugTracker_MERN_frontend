@@ -15,7 +15,7 @@ const Registrar = () => {
     if ([nombre, email, password, repetirPassword].includes("")) {
       setAlerta({
         error: true,
-        msg: "Todos los campos son obligatorios",
+        msg: "All fields are required",
       });
       return;
     }
@@ -23,7 +23,7 @@ const Registrar = () => {
     if (password !== repetirPassword) {
       setAlerta({
         error: true,
-        msg: "Los passwords no coinciden",
+        msg: "The passwords do not match",
       });
       return;
     }
@@ -31,7 +31,7 @@ const Registrar = () => {
     if (password.length < 6) {
       setAlerta({
         error: true,
-        msg: "El password debe tener al menos 6 caracteres",
+        msg: "The password must have at least 6 characters",
       });
       return;
     }
@@ -64,8 +64,8 @@ const Registrar = () => {
   return (
     <>
       <h1 className="text-sky-600 font-black text-6xl capitalize">
-        Crea tu cuenta y administra tus{" "}
-        <span className="text-slate-700">bugs lol</span>
+        Create your account and manage your{" "}
+        <span className="text-slate-700">projects</span>
       </h1>
       {msg && <Alerta alerta={alerta} />}
       <form
@@ -77,7 +77,7 @@ const Registrar = () => {
             className="uppercase text-gray-600 block text-xl font-bold"
             htmlFor="nombre"
           >
-            Nombre
+            Name
           </label>
           <input
             id="nombre"
@@ -125,7 +125,7 @@ const Registrar = () => {
             className="uppercase text-gray-600 block text-xl font-bold"
             htmlFor="password2"
           >
-            Repetir Password
+            Repeat Password
           </label>
           <input
             id="password2"
@@ -148,13 +148,13 @@ const Registrar = () => {
           className="block text-center my-5 text-slate-500 uppercase text-sm"
           to="/"
         >
-          ¿Ya tienes una cuenta? Inicia Sesión
+          Do you already have an account? Log in
         </Link>
         <Link
           className="block text-center my-5 text-slate-500 uppercase text-sm"
           to="/olvide-password"
         >
-          Olvidé mi password
+          I forgot my password
         </Link>
       </nav>
     </>

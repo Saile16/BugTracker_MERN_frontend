@@ -66,7 +66,7 @@ const Proyecto = () => {
   });
   const { nombre, cliente, estado, descripcion } = proyecto;
   // console.log(proyecto);
-  if (cargando) return <h1>Cargando...</h1>;
+  if (cargando) return <h1>Loading...</h1>;
   const { msg } = alerta;
 
   return (
@@ -93,7 +93,7 @@ const Proyecto = () => {
               to={`/proyectos/editar/${id}`}
               className="uppercase font-bold"
             >
-              Editar
+              Edit
             </Link>
           </div>
         )}
@@ -116,11 +116,11 @@ const Proyecto = () => {
               clipRule="evenodd"
             />
           </svg>
-          Nueva Tarea
+          New Task
         </button>
       )}
 
-      <p className="font-bold text-xl mt-10">Tareas del proyecto</p>
+      <p className="font-bold text-xl mt-10">Project Tasks</p>
 
       <div className="bg-white shadow mt-10 rounded-lg">
         {proyecto.tareas?.length ? (
@@ -129,21 +129,19 @@ const Proyecto = () => {
           ))
         ) : (
           <p className="text-center my-5 p-10">
-            No hay tareas en este proyecto
+            There are no tasks in this project
           </p>
         )}
       </div>
       {admin && (
         <>
           <div className="flex items-center justify-between mt-10">
-            <p className="font-bold text-xl mt-10">
-              Colaboradores del proyecto
-            </p>
+            <p className="font-bold text-xl mt-10">Project Collaborators</p>
             <Link
               to={`/proyectos/nuevo-colaborador/${proyecto._id}`}
               className="text-gray-400 hover:text-black uppercase font-bold"
             >
-              Añadir
+              Add
             </Link>
           </div>
           <div className="bg-white shadow mt-10 rounded-lg">
@@ -153,7 +151,7 @@ const Proyecto = () => {
               ))
             ) : (
               <p className="text-center my-5 p-10">
-                No hay colaboradores en este proyecto
+                There are no collaborators in this project
               </p>
             )}
           </div>

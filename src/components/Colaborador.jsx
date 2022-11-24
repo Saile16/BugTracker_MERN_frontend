@@ -17,7 +17,7 @@ const Colaborador = ({ colaborador }) => {
           type="button"
           onClick={() => handleModalEliminarColaborador(colaborador)}
         >
-          Eliminar
+          Delete
         </button>
       </div>
     </div>

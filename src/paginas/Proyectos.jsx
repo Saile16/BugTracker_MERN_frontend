@@ -11,10 +11,10 @@ const Proyectos = () => {
     obtenerProyectos();
   }, []);
   if (cargando)
-    return <h1 className="text-4xl text-center text-sky-600">Cargando...</h1>;
+    return <h1 className="text-4xl text-center text-sky-600">Loading...</h1>;
   return (
     <>
-      <h1 className="text-4xl font-black">Proyectos</h1>
+      <h1 className="text-4xl font-black">Projects</h1>
       {msg && <Alerta alerta={alerta} />}
       <div className="bg-white shadow mt-10 rounded-lg ">
         {proyectos.length ? (
@@ -23,7 +23,7 @@ const Proyectos = () => {
           ))
         ) : (
           <p className=" text-center text-gray-600 uppercase p-5">
-            No hay proyectos
+            There are no projects to show
           </p>
         )}
       </div>

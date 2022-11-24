@@ -49,7 +49,7 @@ const ModalEliminarTarea = () => {
                   className="bg-white rounded-md text-gray-400 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
                   onClick={handleModalEliminarTarea}
                 >
-                  <span className="sr-only">Cerrar</span>
+                  <span className="sr-only">Close</span>
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     className="h-6 w-6"
@@ -85,11 +85,11 @@ const ModalEliminarTarea = () => {
                     as="h3"
                     className="text-lg leading-6 font-bold text-gray-900"
                   >
-                    Eliminar Tarea
+                    Delete Task
                   </Dialog.Title>
                   <div className="mt-2">
                     <p className="text-sm text-gray-500">
-                      Una tarea elimininada no se podra recuperar{" "}
+                      A deleted task cannot be recovered{" "}
                     </p>
                   </div>
                 </div>
@@ -100,14 +100,14 @@ const ModalEliminarTarea = () => {
                   className="w-full inline-flex justify-center rounded-md border border-transparent shadow-sm px-4 py-2 bg-red-600 text-base font-medium text-white hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500 sm:ml-3 sm:w-auto sm:text-sm"
                   onClick={eliminarTarea}
                 >
-                  Eliminar
+                  Delete
                 </button>
                 <button
                   type="button"
                   className="mt-3 w-full inline-flex justify-center rounded-md border border-gray-300 shadow-sm px-4 py-2 bg-white text-base font-medium text-gray-700 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 sm:mt-0 sm:w-auto sm:text-sm"
                   onClick={handleModalEliminarTarea}
                 >
-                  Cancelar
+                  Cancel
                 </button>
               </div>
             </div>

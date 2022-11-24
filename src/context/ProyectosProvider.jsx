@@ -94,7 +94,7 @@ const ProyectosProvider = ({ children }) => {
 
       //Mostrar la alerta
       setAlerta({
-        msg: "Proyecto actualizado correctamente",
+        msg: "Project updated successfully",
         error: false,
       });
 
@@ -121,7 +121,7 @@ const ProyectosProvider = ({ children }) => {
       const { data } = await clienteAxios.post("/proyectos", proyecto, config);
       setProyectos([...proyectos, data]);
       setAlerta({
-        msg: "Proyecto creado correctamente",
+        msg: "Project created successfully",
         error: false,
       });
 
